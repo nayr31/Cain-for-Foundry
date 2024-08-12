@@ -10,10 +10,7 @@ This module is intended for use with the [Custom System Builder](https://foundry
 Once you have installed the module and its compendia, make sure you do the following:
 
 1. Go to the Compendium Items tab in Foundry.
-2. Right click on each of the added compendia, and import all content.
-
-**IMPORTANT:** You MUST keep document ids or else the sheets will not work properly!
-
+2. Right click on each of the added compendia, and import all content (with the "Keep Document IDs" checked to true).
 3. Done! If an update does come out, simply do this again.
 
 **IMPORTANT:** After importing, its a good idea to reload all character sheets (if you're updating).
@@ -32,11 +29,17 @@ Once you have installed the module and its compendia, make sure you do the follo
 
 Done.
 
-### Adding Agendas
+### Adding Agendas to a sheet
 
-1.  Open the `Compendium Packs` tab on the top right.
-2.  Open the `Agendas` Compendium.
-3.  Drag your Agenda from the Compendium anywhere onto the sheet.
+1. Create a new item in the items tab with the `equippableItem` type.
+2. Make sure that the dropdown is set to `_Agenda`, then refresh the item.
+3. Customize as required. You can create new items with the `_AgendaAbility` type and drag them into the "Abilities" text area for easy access. (**Note:** These are the items that contain automation. Check out the below section for more information.)
+
+This is an example of a finished Agenda (the "Make Item Unique" checkbox makes it so players can only equip one copy of that agenda/item):
+
+![image](https://github.com/user-attachments/assets/60dd0516-9e31-48ef-99fa-fee1f9eb84ef)
+
+4. Drag the Agenda anywhere onto your sheet.
 
 It should look like this when you are done:
 
@@ -47,6 +50,21 @@ To add a "bolded agenda item", click on the `+` symbol on the far right of the t
 
 ![image](https://github.com/user-attachments/assets/6c55375c-0e11-422f-97e1-0b413584e27b)
 
-**Hint:** You can click on the Agenda inside of your sheet for a quick and easy reference/copy-paste.
+### Agenda Abilities
 
-**Agenda Abilities** are the same as Agendas. You will find them in the Compendium alongside their associated Agenda, and also within the Agenda itself. Simply drag them anywhere onto your sheet.
+Agenda abilities are extremely simple. They contain a Description field and nothing else. To achieve automation from an agenda ability, you'll need to open the `_Exorcist` template in the actors tab. This is the base sheet that all players use for their exorcists. Some values are contained within number field inputs (such as number of blasphemies, `numblasphemy`), and others are hidden at the top of the page, "Configure hidden attributes".
+
+Here is an example of creating a simple agenda abilitiy that increases maximum stress on the execution talisman by 1.
+
+1. Find the max stress value. In this case, we can see it both displayed on the sheet near the execution/stress input box, and contained from within the hidden properties tab: `maxstress`.
+2. Create a new agenda ability item, give it a description (optional), then press the "Configure item modifiers" button.
+3. In this menu, press the `+` button under the "item modifiers" table.
+4. Place your variable name under the `key` column. In this case, `maxstress`.
+5. `Op` is the operation that the modifier performs. In this case, we want `+`.
+6. Variable formula will be the number included by the operator. In our case, its `1`.
+7. Description optional, but I usually like to include the decsription of the ability.
+
+For more complex options, you will have to either submit a feature request or implement it yourself. By default, CSB only supports number modifications.
+There is an example of an "advanced" item modifier in the hidden attribute `ignoreinj`. The `Painkiller` agenda modifies the value by 1. In the `maxstress` hidden attribute there is a condition that checks for it, and disables adding injuries if the `ignoreinj` value is not 0.
+
+**Note:** Any alterations to the template are subject to deletion upon any template update.
