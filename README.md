@@ -5,13 +5,8 @@ Have questions? You can reach out to me @calicoskunk on PNET or the unofficial C
 
 ## Use
 
-This module is intended for use with the [Custom System Builder](https://foundryvtt.com/packages/custom-system-builder/) System. It will not work in other systems.
-
-Once you have installed the module and its compendia, make sure you do the following:
-
-1. Go to the Compendium Items tab in Foundry.
-2. Right click on each of the added compendia, and import all content (with the "Keep Document IDs" checked to true).
-3. Done! If an update does come out, simply do this again.
+1. Install [Custom System Builder](https://foundryvtt.com/packages/custom-system-builder/).
+2. Inside of a world with the Custom System Builder System, click the "Import templates JSON" and select the `export.json` file from the [releases](https://github.com/nayr31/Cain-for-Foundry/releases) page.
 
 **IMPORTANT:** After importing, its a good idea to reload all character sheets (if you're updating).
 
