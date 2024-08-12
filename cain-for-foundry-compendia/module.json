@@ -1,6 +1,6 @@
 {
-  "id": "cain-for-foundry",
-  "title": "Cain for Foundry",
+  "id": "cain-for-foundry-compendia",
+  "title": "Cain for Foundry: Compendia",
   "version": "1.0.0",
   "compatibility": {
     "minimum": "11",
@@ -15,7 +15,7 @@
       }
     ]
   },
-  "description": "A module that makes use of the Custom System Builder system to enable the play of Tom Bloom's \"CAIN\".",
+  "description": "Content compendia for the CSB Cain for Foundry template package.",
   "authors": [
     {
       "name": "calicoskunk",
@@ -25,9 +25,9 @@
   "url": "https://github.com/nayr31/Cain-for-Foundry",
   "packs": [
     {
-      "name": "item-templates",
-      "label": "_Item Templates",
-      "path": "packs/item-templates",
+      "name": "agendas",
+      "label": "Agendas",
+      "path": "packs/agendas",
       "type": "Item",
       "system": "custom-system-builder",
       "ownership": {
@@ -40,11 +40,22 @@
       "label": "_Actor Templates",
       "path": "packs/actor-templates",
       "type": "Actor",
-      "system": "custom-system-builder",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      }
+      },
+      "system": "custom-system-builder"
+    },
+    {
+      "name": "item-templates",
+      "label": "_Item Templates",
+      "path": "packs/item-templates",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "custom-system-builder"
     }
   ]
 }
