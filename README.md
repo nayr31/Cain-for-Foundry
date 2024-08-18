@@ -5,8 +5,13 @@ Have questions? You can reach out to me @calicoskunk on PNET or the unofficial C
 
 ## Use
 
-1. Install [Custom System Builder](https://foundryvtt.com/packages/custom-system-builder/).
-2. Inside of a world with the Custom System Builder System, click the "Import templates JSON" and select the `export.json` file from the [releases](https://github.com/nayr31/Cain-for-Foundry/releases) page.
+1. Install [Custom System Builder](https://foundryvtt.com/packages/custom-system-builder/) and create a world with it.
+2. Download the `module.zip` file and extract it into your modules folder (...FoundryVTT\Data\modules\).
+3. In your new world, enable the module and go to the compendium items tab.
+4. Right click on each of the compendia included in the module, starting with the `_` template ones first. It is **_VERY IMPORTANT_** that you check "Keep document IDs".
+
+![image](https://github.com/user-attachments/assets/5f28fa93-7599-4c72-9cd2-ab37d80fbf99)
+
 
 **IMPORTANT:** After importing, its a good idea to reload all character sheets (if you're updating).
 
